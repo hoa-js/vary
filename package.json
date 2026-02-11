@@ -1,17 +1,17 @@
 {
   "name": "@hoajs/vary",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vary middleware for Hoa.",
-  "main": "./dist/cjs/vary.js",
+  "main": "./dist/cjs/vary.cjs",
   "type": "module",
-  "module": "./dist/esm/vary.js",
+  "module": "./dist/esm/vary.mjs",
   "types": "./types/index.d.ts",
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
-      "import": "./dist/esm/vary.js",
-      "require": "./dist/cjs/vary.js",
-      "default": "./dist/esm/vary.js"
+      "import": "./dist/esm/vary.mjs",
+      "require": "./dist/cjs/vary.cjs",
+      "default": "./dist/esm/vary.mjs"
     }
   },
   "files": [
@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "build": "tsup",
+    "build": "tsdown",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "prepublishOnly": "npm run lint && npm run test && npm run build",
     "prepare": "husky"
@@ -38,15 +38,15 @@
     "vary"
   ],
   "devDependencies": {
-    "@commitlint/cli": "20.1.0",
-    "@commitlint/config-conventional": "20.0.0",
-    "eslint": "9.38.0",
-    "globals": "16.4.0",
+    "@commitlint/cli": "20.4.1",
+    "@commitlint/config-conventional": "20.4.1",
+    "eslint": "9.39.2",
+    "globals": "17.3.0",
     "hoa": "*",
     "husky": "9.1.7",
     "jest": "30.2.0",
     "neostandard": "0.12.2",
-    "tsup": "8.5.0"
+    "tsdown": "^0.20.3"
   },
   "peerDependencies": {
     "hoa": "*"
